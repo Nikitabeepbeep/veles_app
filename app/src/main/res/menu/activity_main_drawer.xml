@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        //корзина
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/nav_cart"
+            android:title="Корзина"
+            android:iconTint="@android:color/white"/>
+        //заказы
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/orders"
+            android:title="Заказы"
+            android:iconTint="@android:color/white"/>
+        //настройки
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/settings"
+            android:title="Настройки"
+            android:iconTint="@android:color/white"/>
+        //о компании
+        <item
+            android:id="@+id/about_us"
+            android:icon="@drawable/information"
+            android:title="О компании"
+            android:iconTint="@color/white"/>
+        //выход
+        <item
+            android:id="@+id/exit"
+            android:icon="@drawable/logout"
+            android:title="Выход"
+            android:iconTint="@android:color/white"/>
+
+    </group>
+</menu>

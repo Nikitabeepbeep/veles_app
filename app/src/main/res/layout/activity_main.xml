@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/b">
+    //логотип копмании
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:src="@drawable/applogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        />
+    //слоган компании
+        <TextView
+            android:id="@+id/app_slogan"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_logo"
+            android:layout_centerHorizontal="true"
+            android:text="Ценим ваше доверие"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold|italic"/>
+    //кнопка "войти"
+    <Button
+        android:id="@+id/in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="20dp"
+        android:background="@drawable/button"
+        android:text="Зарегестрироваться"
+        android:textAllCaps="false"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        />
+    //кнопка "зарегистрироваться"
+    <Button
+        android:id="@+id/log_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="20dp"
+        android:background="@drawable/input_design"
+        android:layout_above="@id/in"
+        android:text="Уже есть аккаунт? Войти"
+        android:textAllCaps="false"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        />
+</RelativeLayout>
