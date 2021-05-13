@@ -16,12 +16,6 @@
             android:icon="@drawable/orders"
             android:title="Заказы"
             android:iconTint="@android:color/white"/>
-        //настройки
-        <item
-            android:id="@+id/settings"
-            android:icon="@drawable/settings"
-            android:title="Настройки"
-            android:iconTint="@android:color/white"/>
         //о компании
         <item
             android:id="@+id/about_us"
@@ -34,6 +28,5 @@
             android:icon="@drawable/logout"
             android:title="Выход"
             android:iconTint="@android:color/white"/>
-
     </group>
 </menu>

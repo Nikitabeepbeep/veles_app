@@ -1,11 +1,15 @@
 package com.example.veles_app;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.veles_app.R;
 import com.example.veles_app.LoginActivity;
@@ -18,6 +22,7 @@ import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -31,6 +36,8 @@ import androidx.appcompat.widget.Toolbar;
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private AppBarConfiguration mAppBarConfiguration;
+    AlertDialog.Builder builder;
+    Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,14 +99,30 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         } else if(id == R.id.nav_orders){
 
-        } else if(id == R.id.settings){
+        } else if(id == R.id.about_us){
 
         } else if(id == R.id.exit){
 
-        }{
-            Intent loginIntent = new Intent(HomeActivity.this, LoginActivity.class);
-            startActivity(loginIntent);
         }
+        switch (id){
+            case R.id.nav_cart:
+                Toast.makeText(this, "Тут будет переход в корзину", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.nav_orders:
+                Toast.makeText(this, "Тут будет переход к заказам", Toast.LENGTH_SHORT).show();
+                break;
+            case  R.id.about_us:
+                Toast.makeText(this, "Вы нажали на кнопку о компании!", Toast.LENGTH_SHORT).show();
+                Intent s = new Intent(HomeActivity.this, About_us.class);
+                startActivity(s);
+                break;
+            case R.id.exit:
+                break;
+        }
+//        {
+//            Intent loginIntent = new Intent(HomeActivity.this, LoginActivity.class);
+//            startActivity(loginIntent);
+//        }
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         drawerLayout.closeDrawer(GravityCompat.START);
         return false;

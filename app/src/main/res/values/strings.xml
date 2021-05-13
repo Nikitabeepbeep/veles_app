@@ -7,8 +7,14 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="about_us">
+        •Компания была создана в г.Уфе в 2008 году.
+        •Основное направление деятельности - поставка и продажа фасовонной продукции оптом.
+        •Основным конкнкурентнтым преимуществом является : длительный опыт работы на рынке сельскохозяйственной продукции.
+        •В ближайших планах развитие филиалов по всей России.
+        •Телефон для связи:
+        •В нашем приложении вы сможете купить различные виды круп по привлекательной цене.</string>
 </resources>
