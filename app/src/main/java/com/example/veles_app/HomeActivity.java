@@ -117,6 +117,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(s);
                 break;
             case R.id.exit:
+                Toast.makeText(this, "Тут будет выход из программы!", Toast.LENGTH_SHORT).show();
                 break;
         }
 //        {
