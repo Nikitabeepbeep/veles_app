@@ -34,28 +34,10 @@
         />
 
     <EditText
-        android:id="@+id/register_phone_input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/register_username_input"
-        android:background="@drawable/input_design"
-        android:padding="15dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginLeft="25dp"
-        android:hint="Номер телефона"
-        android:inputType="number"
-        android:textColorHint="@android:color/white"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        />
-
-    <EditText
         android:id="@+id/register_password_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/register_phone_input"
+        android:layout_below="@+id/register_username_input"
         android:background="@drawable/input_design"
         android:padding="15dp"
         android:layout_marginTop="20dp"
@@ -69,11 +51,30 @@
         android:textStyle="bold"
         />
 
+    <EditText
+        android:id="@+id/register_password_input1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_password_input"
+        android:background="@drawable/input_design"
+        android:padding="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+
     <Button
         android:id="@+id/register_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/register_password_input"
+        android:layout_below="@+id/register_password_input1"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="15dp"

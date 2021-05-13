@@ -32,7 +32,7 @@
         <item
             android:id="@+id/exit"
             android:icon="@drawable/logout"
-            android:title="Выход из приложения"
+            android:title="Выход"
             android:iconTint="@android:color/white"/>
 
     </group>
