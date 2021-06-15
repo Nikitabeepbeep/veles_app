@@ -106,18 +106,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         }
         switch (id){
             case R.id.nav_cart:
-                Toast.makeText(this, "Тут будет переход в корзину", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_orders:
-                Toast.makeText(this, "Тут будет переход к заказам", Toast.LENGTH_SHORT).show();
                 break;
             case  R.id.about_us:
-                Toast.makeText(this, "Вы нажали на кнопку о компании!", Toast.LENGTH_SHORT).show();
                 Intent s = new Intent(HomeActivity.this, About_us.class);
                 startActivity(s);
                 break;
             case R.id.exit:
-                Toast.makeText(this, "Тут будет выход из программы!", Toast.LENGTH_SHORT).show();
                 break;
         }
 //        {

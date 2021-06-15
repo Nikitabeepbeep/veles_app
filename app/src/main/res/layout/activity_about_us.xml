@@ -5,15 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".About_us">
-<TextView
-    android:id="@+id/new_id"
+<ImageView
+    android:id="@+id/new_"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:padding="20dp"
-    android:textSize="23dp"
-    android:textAllCaps="false"
-    android:textColor="@color/black"
-    android:text="@string/about_us"/>
+    android:src="@drawable/abobus"/>
     <Button
         android:id="@+id/exit"
         android:layout_width="wrap_content"
@@ -23,5 +19,6 @@
         android:background="@color/black"
         android:text="Назад"
         android:textAllCaps="false"
-        android:layout_below="@+id/new_id"/>
+        android:layout_below="@+id/new_"
+        />
 </RelativeLayout>

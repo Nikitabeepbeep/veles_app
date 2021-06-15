@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/applogo"
         android:layout_width="300dp"
-        android:layout_height="150dp"
+        android:layout_height="250dp"
         android:src="@drawable/logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
