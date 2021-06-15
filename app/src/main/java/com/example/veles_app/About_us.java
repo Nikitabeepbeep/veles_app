@@ -21,7 +21,7 @@ AlertDialog.Builder builder;
             @Override
             public void onClick(View v) {
                 builder.setTitle("")
-                        .setMessage("Вы правда хотите вернуться назад?")
+                        .setMessage("Вы правда хотите выйти?")
                         .setCancelable(true)
                         .setPositiveButton("Да", new DialogInterface.OnClickListener() {
                             @Override

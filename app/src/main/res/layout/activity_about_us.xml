@@ -4,12 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".About_us">
-<ImageView
+    tools:context=".About_us"
+    android:background="@color/white">
+    <ImageView
+        android:id="@id/new_s"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/logo"
+        android:layout_marginTop="20dp"/>
+<TextView
     android:id="@+id/new_"
+    android:padding="15dp"
+    android:textSize="22dp"
+    android:layout_below="@+id/new_s"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:src="@drawable/abobus"/>
+    android:text="@string/about_us"
+    android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/oz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Оцените приложение"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:layout_below="@+id/new_"/>
+
+    <RatingBar
+        android:id="@+id/z"
+        android:layout_below="@+id/oz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00831A1A"
+        android:progressBackgroundTint="@color/a"
+        android:progressTint="@color/b"
+        android:layout_centerHorizontal="true"/>
     <Button
         android:id="@+id/exit"
         android:layout_width="wrap_content"
@@ -19,6 +50,6 @@
         android:background="@color/black"
         android:text="Назад"
         android:textAllCaps="false"
-        android:layout_below="@+id/new_"
+        android:layout_below="@+id/z"
         />
 </RelativeLayout>
