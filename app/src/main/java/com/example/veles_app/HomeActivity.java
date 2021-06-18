@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
@@ -42,6 +41,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import android.os.Bundle;
+import java.util.ArrayList;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -52,13 +53,29 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     AlertDialog.Builder builder;
     Button btn;
     DatabaseReference ProductsRef;
-    private RecyclerView recyclerView;
-    RecyclerView.LayoutManager layoutManager;
+    ArrayList<State> states = new ArrayList<State>();
+    //RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recycler_menu)
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        // начальная инициализация списка
+        setInitialData();
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.list);
+        // создаем адаптер
+        StateAdapter adapter = new StateAdapter(this, states);
+        // устанавливаем для списка адаптер
+        recyclerView.setAdapter(adapter);
+    }
+    private void setInitialData(){
+
+        states.add(new State ("Бурый рис Здоровье", "Крупа кукурузная №3,4,5,6. ГОСТ. Производство краснодарский край","150 рублей", R.drawable.applogo));
+        states.add(new State ("Аргентина", "Буэнос-Айрес","150 рублей", R.drawable.applogo));
+        states.add(new State ("Колумбия", "Богота","150 рублей", R.drawable.applogo));
+        states.add(new State ("Уругвай", "Монтевидео","150 рублей", R.drawable.applogo));
+        states.add(new State ("Чили", "Сантьяго","150 рублей", R.drawable.applogo));
+
         ProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");
 
 
@@ -90,11 +107,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        recyclerView = findViewById(R.id.recycler_menu);
-        recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-
     }
 
     @Override
@@ -114,37 +126,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
     @Override
-    protected void onStart() {
-        super.onStart();
-
-        FirebaseRecyclerOptions<Products> options = new FirebaseRecyclerOptions.Builder<Products>()
-                .setQuery(ProductsRef, Products.class).build();
-
-        FirebaseRecyclerAdapter<Products, ProductViewHolder> adapter = new FirebaseRecyclerAdapter<Products, ProductViewHolder>(options) {
-            @Override
-            protected void onBindViewHolder(@NonNull @NotNull ProductViewHolder holder, int i, @NonNull @NotNull Products model) {
-                holder.txtProductName.setText(model.getProductName());
-                holder.txtProductDescription.setText(model.getDescription());
-                holder.txtProductPrice.setText("Стоимость = " + model.getPrice() + " рублей");
-                Picasso.get().load(model.getImageURL()).into(holder.imageView);
-            }
-
-            @NonNull
-            @NotNull
-            @Override
-            public ProductViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.productitems, parent, false);
-                ProductViewHolder holder = new ProductViewHolder(view);
-                return holder;
-            }
-        };
-
-        recyclerView.setAdapter(adapter);
-        adapter.startListening();
-
-    }
-
-    @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if(id == R.id.nav_cart){
@@ -160,10 +141,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         }
         switch (id) {
             case R.id.nav_cart:
-                Toast.makeText(this, "Тут будет реализован переход в корзину", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Тут будет переход в корзину", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_orders:
-                Toast.makeText(this, "Тут будут реализованы заказы", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Тут будет переход к заказам", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.about_us:
                 Intent s = new Intent(HomeActivity.this, About_us.class);
