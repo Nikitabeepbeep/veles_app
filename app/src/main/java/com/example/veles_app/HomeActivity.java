@@ -70,7 +70,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     }
     private void setInitialData(){
 
-        states.add(new State ("Бурый рис Здоровье", "Крупа кукурузная №3,4,5,6. ГОСТ. Производство краснодарский край","150 рублей", R.drawable.applogo));
+        states.add(new State ("Рис розовый Девзира", "Пищевая ценность на 100 грамм продукта: белки - 7,0 г., жиры - 9,0 г., углеводы - 70,0 г. Энергетическая ценность: 323 Ккал","Цена: 150 рублей", R.drawable.devzira));
         states.add(new State ("Аргентина", "Буэнос-Айрес","150 рублей", R.drawable.applogo));
         states.add(new State ("Колумбия", "Богота","150 рублей", R.drawable.applogo));
         states.add(new State ("Уругвай", "Монтевидео","150 рублей", R.drawable.applogo));
