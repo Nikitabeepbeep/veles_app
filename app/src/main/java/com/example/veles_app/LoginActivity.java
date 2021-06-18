@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.veles_app.Model.Users;
+import com.example.veles_app.Prevalent.Prevalent;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -22,6 +23,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import org.jetbrains.annotations.NotNull;
+
+import io.paperdb.Paper;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -41,6 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         passwordInput = (EditText) findViewById(R.id.login_password_input);
         checkBoxRememberMe = (CheckBox) findViewById(R.id.login_checkbox);
         loadingBar = new ProgressDialog(this);
+        Paper.init(this);
 
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
@@ -75,7 +79,13 @@ public class LoginActivity extends AppCompatActivity {
             ValidateLogin(user, pass);
         }
     }
-    private void ValidateLogin(String user, String pass) {
+    private void ValidateLogin( final String user, final String pass) {
+        //запись данных в память телефона
+        if (checkBoxRememberMe.isChecked()){
+            Paper.book().write(Prevalent.UserKey, user);
+            Paper.book().write(Prevalent.Userpassword, pass);
+
+        }
         //создание объектов в Database Reference
         final DatabaseReference RootRef;
         RootRef = FirebaseDatabase.getInstance().getReference();
