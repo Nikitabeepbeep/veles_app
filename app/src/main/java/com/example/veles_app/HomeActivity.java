@@ -101,6 +101,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         } else if(id == R.id.about_us){
 
+        } else if(id == R.id.settings){
+
         } else if(id == R.id.exit){
 
         }
@@ -112,6 +114,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case  R.id.about_us:
                 Intent s = new Intent(HomeActivity.this, About_us.class);
                 startActivity(s);
+                break;
+            case R.id.settings:
+                Intent x = new Intent(HomeActivity.this, SettingsActivity.class);
+                startActivity(x);
                 break;
             case R.id.exit:
                 this.finish();
