@@ -95,8 +95,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Здесь будет переход в корзину", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                Intent cart = new Intent(HomeActivity.this, Cart_activity.class);
+                startActivity(cart);
             }
         });
 
@@ -147,7 +149,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         }
         switch (id) {
             case R.id.nav_cart:
-                Toast.makeText(this, "Тут будет переход в корзину", Toast.LENGTH_SHORT).show();
+                Intent cart = new Intent(HomeActivity.this, Cart_activity.class);
+                startActivity(cart);
                 break;
             case R.id.nav_orders:
                 Toast.makeText(this, "Тут будет переход к заказам", Toast.LENGTH_SHORT).show();
