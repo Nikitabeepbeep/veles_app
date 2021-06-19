@@ -6,12 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".About_us"
     android:background="@color/white">
+    //лого компании
     <ImageView
         android:id="@id/new_s"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="100dp"
         android:src="@drawable/logo"
-        android:layout_marginTop="20dp"/>
+        android:layout_below="@+id/nadpis"/>
+
+    //о компании
     <ImageView
         android:id="@+id/oz"
         android:layout_width="match_parent"
@@ -20,6 +23,8 @@
         android:textColor="@color/black"
         android:layout_below="@+id/new_s"
         android:src="@drawable/about_us"/>
+
+    //оценка приложения
 <TextView
     android:id="@+id/zo"
     android:layout_below="@+id/help"
@@ -27,20 +32,50 @@
     android:layout_height="wrap_content"
     android:text="Пожалуйста , оцените приложение!"
     android:textSize="22dp"
+    android:paddingLeft="50dp"
+    android:layout_centerVertical="true"
     android:layout_centerHorizontal="true"
     android:textColor="@color/black"
     android:paddingTop="20dp"/>
 
+    //локация
+<ImageView
+    android:id="@+id/location"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:src="@drawable/location"
+    android:layout_below="@+id/oz"/>
+
+
+    //кнопка локация на карте
+
+
+
+    <Button
+    android:id="@+id/map"
+    android:layout_width="372dp"
+    android:layout_height="50dp"
+    android:layout_below="@+id/location"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:text="Местоположение на карте"
+    android:textSize="16dp"/>
+
+
+
+//кнопка связи с разработчиком
     <Button
         android:id="@+id/help"
         android:background="@color/b"
+        android:layout_marginTop="10dp"
         android:text="Связь с разработчиком"
         android:layout_width="372dp"
         android:layout_height="50dp"
-        android:layout_below="@+id/oz"
+        android:layout_below="@+id/map"
         android:layout_centerHorizontal="true"
         android:textColor="@color/white"
         android:textSize="15dp"/>
+//рейтингбар
     <RatingBar
         android:id="@+id/z"
         android:layout_below="@+id/zo"

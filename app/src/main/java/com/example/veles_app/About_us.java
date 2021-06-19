@@ -18,6 +18,15 @@ AlertDialog.Builder builder;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
         Button btn_help = (Button) findViewById(R.id.help);
+        Button btn_map = (Button)findViewById(R.id.map);
+        btn_map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browser =
+                        new Intent(Intent.ACTION_VIEW, Uri.parse("https://go.2gis.com/d8q6e"));
+                startActivity(browser);
+            }
+        });
         btn_help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
