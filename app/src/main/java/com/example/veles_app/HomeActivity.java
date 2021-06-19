@@ -68,6 +68,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         // устанавливаем для списка адаптер
         recyclerView.setAdapter(adapter);
     }
+
     private void setInitialData(){
 
         states.add(new State ("Рис розовый Девзира", "Пищевая ценность на 100 грамм продукта: белки - 7,0 г., жиры - 9,0 г., углеводы - 70,0 г. Энергетическая ценность: 323 Ккал","Цена: 150 рублей", R.drawable.devzira));
@@ -85,7 +86,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         states.add(new State ("Кунжутное масло", "Фасовка бутылки: 0,5 л.","Цена: 600 рублей", R.drawable.ryzhikovoyemaslo));
 
         ProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");
-
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("Меню");
