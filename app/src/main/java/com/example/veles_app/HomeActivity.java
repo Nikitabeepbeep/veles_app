@@ -71,10 +71,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private void setInitialData(){
 
         states.add(new State ("Рис розовый Девзира", "Пищевая ценность на 100 грамм продукта: белки - 7,0 г., жиры - 9,0 г., углеводы - 70,0 г. Энергетическая ценность: 323 Ккал","Цена: 150 рублей", R.drawable.devzira));
-        states.add(new State ("Аргентина", "Буэнос-Айрес","150 рублей", R.drawable.applogo));
-        states.add(new State ("Колумбия", "Богота","150 рублей", R.drawable.applogo));
-        states.add(new State ("Уругвай", "Монтевидео","150 рублей", R.drawable.applogo));
-        states.add(new State ("Чили", "Сантьяго","150 рублей", R.drawable.applogo));
+        states.add(new State ("Крупа кукурузная", "Крупа кукурузная №3,4,5,6. ГОСТ. Производство краснодарский край.","Цена: 55 рублей", R.drawable.kukuruza_krup));
+        states.add(new State ("Рис Камолино", " Пищевая ценность на 100 грамм продукта: белки - 7,0 г., жиры - 9,0 г., углеводы - 70,0 г. Энергетическая ценность: 323 Ккал","Цена: 80 рублей", R.drawable.kamolino));
+        states.add(new State ("Крупа гороховая", "Краснодарский горох(крупа). ГОСТ 1 сорт. Производство - Краснодарский край.","Цена: 40 рублей", R.drawable.krypa_gorox));
+        states.add(new State ("Рис ГОСТ 1 Сорт", "Пищевая ценность в 100 г продукта: Белки - 0,7 г, жиры - 1,0 г, углеводы – 74,0 г Энергетическая ценность: 333 Ккал/1394 кДж.","Цена: 130 рублей", R.drawable.ris1sort));
+        states.add(new State ("Бурый рис Здоровье", "Пищевая ценность в 100 г. продукта: белок-7,4 г.; жиры-2,2г.; углеводы-52,0г. Энергетическая ценность -285Кал/1190кДж.","Цена: 55 рублей", R.drawable.buryjis));
+
+
 
         ProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");
 
