@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "31800738743",
+    "firebase_url": "https://veles-app-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "veles-app",
+    "storage_bucket": "veles-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:31800738743:android:62fe78456a95998bd05e32",
+        "android_client_info": {
+          "package_name": "com.example.veles_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "31800738743-v6qqo3dtobmbvivav9qegcgu0o92ddbg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIqQQmpSjXTOiCFXozaS5TDqs4e6ZYbXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "31800738743-v6qqo3dtobmbvivav9qegcgu0o92ddbg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

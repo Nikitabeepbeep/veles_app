@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Veles_app.NoActionBar">
-        <activity android:name=".Cart_activity"></activity>
+        <activity android:name=".Zakaz"></activity>
+        <activity android:name=".Cart_activity" />
         <activity android:name=".About_us" />
         <activity
             android:name=".HomeActivity"
