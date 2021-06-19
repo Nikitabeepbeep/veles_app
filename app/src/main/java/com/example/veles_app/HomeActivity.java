@@ -76,8 +76,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         states.add(new State ("Крупа гороховая", "Краснодарский горох(крупа). ГОСТ 1 сорт. Производство - Краснодарский край.","Цена: 40 рублей", R.drawable.krypa_gorox));
         states.add(new State ("Рис ГОСТ 1 Сорт", "Пищевая ценность в 100 г продукта: Белки - 0,7 г, жиры - 1,0 г, углеводы – 74,0 г Энергетическая ценность: 333 Ккал/1394 кДж.","Цена: 130 рублей", R.drawable.ris1sort));
         states.add(new State ("Бурый рис Здоровье", "Пищевая ценность в 100 г. продукта: белок-7,4 г.; жиры-2,2г.; углеводы-52,0г. Энергетическая ценность -285Кал/1190кДж.","Цена: 55 рублей", R.drawable.buryjis));
-
-
+        states.add(new State ("Льняное масло", "Фасовка бутылки: 0,5 л.","Цена: 200 рублей", R.drawable.maslolen));
+        states.add(new State ("Кукурузное масло", "Фасовка бутылки: 0,5 л.","Цена: 150 рублей", R.drawable.kukuruza));
+        states.add(new State ("Тыквенное масло", "Фасовка бутылки: 0,5 л.","Цена: 450 рублей", R.drawable.tukvennoemaslo));
+        states.add(new State ("Соевое масло", "Фасовка бутылки: 0,5 л.","Цена: 200 рублей", R.drawable.soyevoyemaslo));
+        states.add(new State ("Подсолнечное масло", "Фасовка бутылки: 0,5 л.","Цена: 110 рублей", R.drawable.maslopodsolnechnoye));
+        states.add(new State ("Рыжиковое масло", "Фасовка бутылки: 0,5 л.","Цена: 350 рублей", R.drawable.ryzhikovoyemaslo));
+        states.add(new State ("Кунжутное масло", "Фасовка бутылки: 0,5 л.","Цена: 600 рублей", R.drawable.ryzhikovoyemaslo));
 
         ProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");
 
@@ -137,8 +142,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         } else if(id == R.id.about_us){
 
-        } else if(id == R.id.settings){
-
         } else if(id == R.id.exit){
 
         }
@@ -152,10 +155,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.about_us:
                 Intent s = new Intent(HomeActivity.this, About_us.class);
                 startActivity(s);
-                break;
-            case R.id.settings:
-                Intent x = new Intent(HomeActivity.this, SettingsActivity.class);
-                startActivity(x);
                 break;
             case R.id.exit:
                 this.finish();
